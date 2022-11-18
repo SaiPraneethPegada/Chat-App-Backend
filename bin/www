@@ -31,7 +31,11 @@ var server = http.createServer(app);
 let io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: ["https://admin.socket.io", "http://localhost:3000"],
+    origin: [
+      "https://admin.socket.io",
+      "http://localhost:3000",
+      "https://snazzy-crepe-5ab70c.netlify.app",
+    ],
     credentials: true,
   },
 });
