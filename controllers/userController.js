@@ -11,6 +11,10 @@ const userController = {
           message: "User already exists",
         });
       } else {
+        if (req.body.pic === "") {
+          req.body.pic =
+            "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg";
+        }
         let hashedPassword = await hashPassword(req.body.password);
         req.body.password = hashedPassword;
         let user = await userModel.create(req.body);

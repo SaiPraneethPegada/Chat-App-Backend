@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema(
         return validator.isEmail(value);
       },
     },
-    password: { type: "String", required: true },
+    password: { type: "String", required: true, min: 8 },
     pic: {
       type: "String",
       default:
