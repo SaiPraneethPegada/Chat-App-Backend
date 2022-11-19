@@ -35,6 +35,7 @@ let io = new Server(server, {
       "https://admin.socket.io",
       "http://localhost:3000",
       "https://snazzy-crepe-5ab70c.netlify.app",
+      "https://chat-app-e4hy.onrender.com",
     ],
     credentials: true,
   },
